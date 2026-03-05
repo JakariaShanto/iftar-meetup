@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>রমজান মিটআপ উইথ শায়খ ২০২৬</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green-deep: #163d26;
+  --green-mid:  #235c38;
+  --green-soft: #3d8a5e;
+  --green-pale: #eaf5ef;
+  --gold:       #c9a84c;
+  --gold-light: #f0d88a;
+  --gold-pale:  #fdf9ed;
+  --white:      #ffffff;
+  --off-white:  #f9f9f6;
+  --text-dark:  #162518;
+  --text-mid:   #3a5442;
+  --text-light: #6a8a72;
+}
+
+html { font-size: 16px; }
+
+body {
+  font-family: 'Hind Siliguri', sans-serif;
+  background: #1a1a1a;
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+/* ══════════════════════════════════════
+   PAGE WRAPPER  
+══════════════════════════════════════ */
+.page-shell {
+  max-width: 680px;
+  margin: 0 auto;
+  background: var(--off-white);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 60px rgba(0,0,0,0.4);
+}
+
+/* ══════════════════════════════════════
+   GEO PATTERN (decorative)
+══════════════════════════════════════ */
+.geo-bg {
+  position: fixed;
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: 680px; height: 100%;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ══════════════════════════════════════
+   HEADER
+══════════════════════════════════════ */
+.header {
+  background: linear-gradient(155deg, var(--green-deep) 0%, var(--green-mid) 55%, var(--green-soft) 100%);
+  padding: clamp(20px, 5vw, 36px) clamp(16px, 5vw, 36px) clamp(28px, 6vw, 42px);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  height: clamp(18px, 4vw, 28px);
+  background: var(--off-white);
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+.header-inner { text-align: center; position: relative; z-index: 2; }
+
+.bismillah {
+  font-family: 'Amiri', serif;
+  font-size: clamp(18px, 4.5vw, 26px);
+  color: var(--gold-light);
+  letter-spacing: 2px;
+  margin-bottom: clamp(8px, 2vw, 14px);
+  display: block;
+}
+.moon-emoji {
+  font-size: clamp(28px, 8vw, 50px);
+  line-height: 1;
+  margin-bottom: clamp(6px, 2vw, 12px);
+  display: block;
+}
+.event-title-main {
+  font-size: clamp(20px, 5.5vw, 32px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.25;
+  margin-bottom: 4px;
+}
+.gold-divider {
+  width: 60px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: clamp(8px, 2vw, 12px) auto;
+}
+.event-title-sub {
+  font-size: clamp(10px, 2.8vw, 14px);
+  color: var(--gold-light);
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: clamp(10px, 3vw, 18px);
+}
+
+.meta-row {
+  display: flex;
+  justify-content: center;
+  gap: clamp(12px, 4vw, 28px);
+  flex-wrap: wrap;
+}
+.meta-item { text-align: center; }
+.meta-icon  { font-size: clamp(14px, 3.5vw, 18px); display: block; margin-bottom: 2px; }
+.meta-label { font-size: clamp(8px, 2vw, 11px); letter-spacing: 1px; color: var(--gold-light); opacity: 0.8; display: block; }
+.meta-value { font-size: clamp(10px, 2.8vw, 14px); font-weight: 600; color: var(--white); display: block; line-height: 1.4; }
+
+/* ══════════════════════════════════════
+   BODY CONTENT
+══════════════════════════════════════ */
+.body-content {
+  padding: clamp(14px, 4vw, 28px) clamp(14px, 4vw, 28px) clamp(20px, 5vw, 32px);
+  position: relative;
+  z-index: 1;
+}
+
+/* ── BUS BOX ── */
+.bus-box {
+  background: linear-gradient(135deg, var(--green-deep), #1e5c36);
+  border-radius: 12px;
+  padding: clamp(12px, 3vw, 18px) clamp(14px, 4vw, 20px);
+  margin-bottom: clamp(14px, 3.5vw, 20px);
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(10px, 3vw, 16px);
+  box-shadow: 0 4px 16px rgba(22,61,38,0.3);
+}
+.bus-icon  { font-size: clamp(22px, 6vw, 32px); flex-shrink: 0; margin-top: 2px; }
+.bus-title { font-size: clamp(13px, 3.5vw, 17px); font-weight: 700; color: var(--gold-light); margin-bottom: 5px; }
+.bus-detail { font-size: clamp(11px, 2.8vw, 14px); color: rgba(255,255,255,0.85); line-height: 1.65; }
+.bus-detail strong { color: var(--gold-light); }
+
+/* ── SESSION DIVIDER ── */
+.session-divider {
+  width: 100%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: clamp(10px, 3vw, 16px) 0;
+  opacity: 0.4;
+}
+
+/* ── SESSION ── */
+.session { margin-bottom: clamp(12px, 3vw, 18px); }
+
+.session-header {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 2.5vw, 14px);
+  margin-bottom: clamp(8px, 2vw, 12px);
+}
+.session-icon {
+  width: clamp(32px, 8vw, 42px);
+  height: clamp(32px, 8vw, 42px);
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
+  display: flex; align-items: center; justify-content: center;
+  font-size: clamp(14px, 4vw, 20px);
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(22,61,38,0.3);
+}
+.session-label {
+  font-size: clamp(9px, 2.2vw, 11px);
+  letter-spacing: 1.5px;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 1px;
+}
+.session-name  { font-size: clamp(13px, 3.5vw, 17px); font-weight: 700; color: var(--green-deep); line-height: 1.3; }
+.session-venue { font-size: clamp(10px, 2.5vw, 12px); color: var(--text-light); margin-top: 1px; }
+
+.session-body { padding-left: clamp(40px, 10vw, 56px); }
+
+.time-row {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(8px, 2.5vw, 12px);
+  padding: clamp(5px, 1.5vw, 8px) 0;
+  border-bottom: 1px solid rgba(22,61,38,0.07);
+}
+.time-row:last-child { border-bottom: none; }
+.time-badge {
+  background: var(--green-pale);
+  color: var(--green-mid);
+  font-size: clamp(9px, 2.2vw, 11px);
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+  min-width: clamp(72px, 18vw, 96px);
+  text-align: center;
+  border: 1px solid rgba(61,138,94,0.25);
+  flex-shrink: 0;
+  line-height: 1.5;
+}
+.time-desc { font-size: clamp(11px, 2.8vw, 14px); color: var(--text-mid); line-height: 1.65; flex: 1; }
+.time-desc strong { color: var(--text-dark); font-weight: 700; }
+.time-desc em { font-size: clamp(10px, 2.5vw, 12px); font-style: normal; color: var(--text-light); }
+
+.note-box {
+  background: var(--gold-pale);
+  border: 1px solid rgba(201,168,76,0.35);
+  border-left: 3px solid var(--gold);
+  border-radius: 7px;
+  padding: clamp(6px, 1.8vw, 9px) clamp(8px, 2.5vw, 12px);
+  margin-top: 6px;
+  font-size: clamp(10px, 2.5vw, 12px);
+  color: #7a6020;
+  line-height: 1.65;
+}
+.note-box a { color: var(--green-mid); }
+
+.info-note {
+  background: var(--green-pale);
+  border: 1px solid rgba(61,138,94,0.25);
+  border-left: 3px solid var(--green-soft);
+  border-radius: 7px;
+  padding: clamp(6px, 1.8vw, 9px) clamp(8px, 2.5vw, 12px);
+  margin-top: 6px;
+  font-size: clamp(10px, 2.5vw, 12px);
+  color: var(--text-mid);
+  line-height: 1.65;
+}
+
+.bullet-row { display: flex; align-items: flex-start; gap: 8px; padding: clamp(3px, 1vw, 5px) 0; }
+.bullet-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); margin-top: 7px; flex-shrink: 0; }
+.bullet-text { font-size: clamp(11px, 2.8vw, 14px); color: var(--text-mid); line-height: 1.65; }
+.bullet-text strong { color: var(--text-dark); }
+.bullet-text em { font-style: normal; color: var(--text-light); font-size: clamp(10px, 2.5vw, 12px); }
+
+/* ── FOOTER ── */
+.footer {
+  background: linear-gradient(90deg, var(--green-deep), var(--green-mid));
+  padding: clamp(10px, 2.5vw, 16px) clamp(16px, 4vw, 28px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+.footer-brand  { font-size: clamp(9px, 2.2vw, 11px); color: var(--gold-light); line-height: 1.6; }
+.footer-arabic { font-family: 'Amiri', serif; font-size: clamp(13px, 3.2vw, 17px); color: rgba(255,255,255,0.55); }
+
+/* ══════════════════════════════════════
+   PRINT STYLES
+══════════════════════════════════════ */
+@media print {
+  body { background: white; }
+  .page-shell { box-shadow: none; max-width: 100%; min-height: auto; }
+  .geo-bg { display: none; }
+}
+
+/* ══════════════════════════════════════
+   MOBILE TWEAKS (≤ 480px)
+══════════════════════════════════════ */
+@media (max-width: 480px) {
+  .session-body { padding-left: 0; padding-top: 4px; }
+  .session-header { gap: 10px; }
+  .time-row { flex-direction: column; gap: 4px; }
+  .time-badge { min-width: unset; align-self: flex-start; }
+  .meta-row { gap: 14px; }
+  .bus-box { flex-direction: row; }
+}
+</style>
+</head>
+<body>
+
+<!-- Geo background -->
+<svg class="geo-bg" viewBox="0 0 680 1000" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="gp" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <polygon points="30,2 58,17 58,43 30,58 2,43 2,17" fill="none" stroke="#163d26" stroke-width="0.8"/>
+      <polygon points="30,12 48,22 48,38 30,48 12,38 12,22" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
+      <circle cx="30" cy="30" r="3" fill="none" stroke="#163d26" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="680" height="1000" fill="url(#gp)"/>
+</svg>
+
+<div class="page-shell">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-inner">
+      <span class="bismillah">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</span>
+      <span class="moon-emoji">🌙</span>
+      <div class="event-title-main">রমজান মিটআপ উইথ শায়খ</div>
+      <div class="gold-divider"></div>
+      <div class="event-title-sub">আস-সুন্নাহ স্কিল ডেভেলপমেন্ট ইনস্টিটিউট<br>অ্যালামনাই মিটআপ ২০২৬</div>
+      <div class="meta-row">
+        <div class="meta-item">
+          <span class="meta-icon">📅</span>
+          <span class="meta-label">তারিখ</span>
+          <span class="meta-value">০৬ মার্চ ২০২৬<br><span style="font-weight:400">শুক্রবার · ১৬ রমজান</span></span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-icon">🕌</span>
+          <span class="meta-label">স্থান</span>
+          <span class="meta-value">আস-সুন্নাহ ফাউন্ডেশন<br><span style="font-weight:400">মসজিদ কমপ্লেক্স ও ইসলামিক সেন্টার</span></span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-icon">📍</span>
+          <span class="meta-label">মাঠ</span>
+          <span class="meta-value">মাদরাসাতুস সুন্নাহ<br><span style="font-weight:400">মাঠ প্রাঙ্গণ</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body-content">
+
+    <!-- BUS -->
+    <div class="bus-box">
+      <div class="bus-icon">🚌</div>
+      <div>
+        <div class="bus-title">বিশেষ বাস সার্ভিস</div>
+        <div class="bus-detail">
+          আফতাবনগর গেট থেকে মসজিদ কমপ্লেক্স পর্যন্ত · <strong>শুধুমাত্র অ্যালামনাই অংশগ্রহণকারীদের জন্য</strong><br>
+          ⏰ <strong>বাস ছেড়ে যাবে দুপুর ১২:১৫ তে</strong> — কারো জন্য অপেক্ষা করা হবে না। সর্বশেষ সময় ১২:১৫।
+        </div>
+      </div>
+    </div>
+
+    <div class="session-divider"></div>
+
+    <!-- SESSION 1 -->
+    <div class="session">
+      <div class="session-header">
+        <div class="session-icon">🕌</div>
+        <div>
+          <div class="session-label">১ম পর্ব</div>
+          <div class="session-name">জুমা সালাত ও প্রশ্নোত্তর অনুষ্ঠান</div>
+          <div class="session-venue">📍 মসজিদ কমপ্লেক্স</div>
+        </div>
+      </div>
+      <div class="session-body">
+        <div class="time-row">
+          <span class="time-badge">১২:০০ – ১২:৩০</span>
+          <span class="time-desc">
+            <strong>শিক্ষার্থীদের আগমন ও জুমার প্রস্তুতি</strong>
+            <div class="info-note">⚠️ <strong>মসজিদ কমপ্লেক্সে জায়গা সীমিত</strong> — তাই সকলকে অবশ্যই <strong>দুপুর ১২:৩০-এর মধ্যে</strong> মসজিদ কমপ্লেক্সে উপস্থিত থাকার বিশেষ অনুরোধ করা হচ্ছে।</div>
+          </span>
+        </div>
+        <div class="time-row">
+          <span class="time-badge">০১:০০ – ০২:৩০</span>
+          <span class="time-desc">
+            <strong>শায়খ আহমাদুল্লাহ (হাফিজাহুল্লাহ)-এর প্রশ্নোত্তর পর্ব</strong><br>
+            <em>জুমা সালাতের পর শিক্ষার্থীদের জীবনঘনিষ্ঠ প্রশ্নের উত্তর প্রদান করবেন।</em>
+            <div class="note-box">📌 প্রশ্ন জমার শেষ তারিখ: <strong>০৪ মার্চ ২০২৬ (বুধবার)</strong><br>
+            🔗 <a href="https://forms.gle/TUqUxgaYbH1VG9Z26">forms.gle/TUqUxgaYbH1VG9Z26</a></div>
+          </span>
+        </div>
+        <div class="time-row">
+          <span class="time-badge">০২:৩০</span>
+          <span class="time-desc">শায়খের প্রস্থান</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="session-divider"></div>
+
+    <!-- SESSION 2 -->
+    <div class="session">
+      <div class="session-header">
+        <div class="session-icon">🎤</div>
+        <div>
+          <div class="session-label">২য় পর্ব</div>
+          <div class="session-name">সাংস্কৃতিক ও জ্ঞানচর্চা অনুষ্ঠান</div>
+          <div class="session-venue">📍 মসজিদ কমপ্লেক্স / নির্দিষ্ট হলরুম &nbsp;·&nbsp; ০২:৩০ – ০৪:৩০</div>
+        </div>
+      </div>
+      <div class="session-body">
+        <div class="bullet-row"><span class="bullet-dot"></span><span class="bullet-text"><strong>অনুষ্ঠানের শুভ সূচনা —</strong> কুরআন তিলাওয়াত ও হামদ-নাশীদ (২০–৩০ মিনিট)</span></div>
+        <div class="bullet-row"><span class="bullet-dot"></span><span class="bullet-text"><strong>স্বাগত বক্তব্য —</strong> মাহফুজ বিল্লাহ স্যার</span></div>
+        <div class="bullet-row"><span class="bullet-dot"></span><span class="bullet-text"><strong>"দ্বীনে ফেরার গল্প" / "অর্ধেক দিন পূরণের গল্প" সেশন —</strong> শিক্ষার্থীদের জীবনের মজার, শিক্ষণীয় ও অনুপ্রেরণামূলক অভিজ্ঞতা। <em>(আপনাদের অংশগ্রহণ একান্তকাম্য।)</em></span></div>
+        <div class="bullet-row"><span class="bullet-dot"></span><span class="bullet-text"><strong>বিশেষ অনুপ্রেরণামূলক বক্তব্য —</strong> মোতালেব স্যার</span></div>
+      </div>
+    </div>
+
+    <div class="session-divider"></div>
+
+    <!-- SESSION 3 -->
+    <div class="session">
+      <div class="session-header">
+        <div class="session-icon">🧎</div>
+        <div>
+          <div class="session-label">৩য় পর্ব</div>
+          <div class="session-name">আসর সালাত ও ইফতার প্রস্তুতি</div>
+          <div class="session-venue">📍 মাদরাসাতুস সুন্নাহ মাঠ</div>
+        </div>
+      </div>
+      <div class="session-body">
+        <div class="time-row">
+          <span class="time-badge">০৪:৩০ – ০৪:৪৫</span>
+          <span class="time-desc"><strong>জামাতে আসর সালাত আদায়</strong></span>
+        </div>
+        <div class="time-row">
+          <span class="time-badge">০৪:৪৫ – ০৫:১০</span>
+          <span class="time-desc">
+            <strong>মাঠে অবস্থান, টোকেন বিতরণ ও ইফতার সংগ্রহ</strong><br>
+            <em>স্বেচ্ছাসেবক দল টোকেন পৌঁছে দেবে। নির্দিষ্ট বুথে টোকেন জমা দিয়ে ইফতার সংগ্রহ করুন।</em>
+          </span>
+        </div>
+        <div class="time-row">
+          <span class="time-badge">০৫:০০ – ০৫:৪৫</span>
+          <span class="time-desc"><strong>বিশেষ বক্তব্য —</strong> ফাহিম আব্দুল্লাহ ভাই ও সাব্বির ভাই</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="session-divider"></div>
+
+    <!-- SESSION 4 -->
+    <div class="session">
+      <div class="session-header">
+        <div class="session-icon">🌅</div>
+        <div>
+          <div class="session-label">৪র্থ পর্ব</div>
+          <div class="session-name">ইফতার, মাগরিব সালাত ও সমাপনী</div>
+          <div class="session-venue">📍 মাদরাসাতুস সুন্নাহ মাঠ</div>
+        </div>
+      </div>
+      <div class="session-body">
+        <div class="time-row">
+          <span class="time-badge">০৫:৫০ – আযান</span>
+          <span class="time-desc"><strong>ব্যক্তিগত দোয়া ও জিকির</strong></span>
+        </div>
+        <div class="time-row">
+          <span class="time-badge">মাগরিব আযান</span>
+          <span class="time-desc">
+            <strong>ইফতার গ্রহণ</strong> (রাতের খাবারসহ পরিবেশন)<br>
+            <em>স্থানে বসে খেতে পারবেন অথবা সাথে নিয়ে যেতে পারবেন।</em>
+          </span>
+        </div>
+        <div class="bullet-row"><span class="bullet-dot"></span><span class="bullet-text"><strong>জামাতে মাগরিব সালাত —</strong> মাঠে একসাথে আদায়</span></div>
+        <div class="bullet-row"><span class="bullet-dot"></span><span class="bullet-text"><strong>সমাপনী বক্তব্য —</strong> তানভীর আহমেদ স্যার (অনুষ্ঠানের সমাপ্তি ঘোষণা)</span></div>
+      </div>
+    </div>
+
+  </div><!-- /body-content -->
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-brand">আস-সুন্নাহ স্কিল ডেভেলপমেন্ট ইনস্টিটিউট · অ্যালামনাই মিটআপ ২০২৬</div>
+    <div class="footer-arabic">رَمَضَانُ شَهْرُ الْخَيْر</div>
+  </div>
+
+</div><!-- /page-shell -->
+
+<style>
+/* ── ANIMATION BASE STYLES ── */
+.header-inner > * { opacity: 0; }
+
+.anim-fade-down  { opacity: 0; transform: translateY(-24px); transition: opacity .7s ease, transform .7s ease; }
+.anim-fade-up    { opacity: 0; transform: translateY(28px);  transition: opacity .65s ease, transform .65s ease; }
+.anim-fade-left  { opacity: 0; transform: translateX(-28px); transition: opacity .6s ease, transform .6s ease; }
+.anim-fade-right { opacity: 0; transform: translateX(28px);  transition: opacity .6s ease, transform .6s ease; }
+.anim-scale      { opacity: 0; transform: scale(0.88);       transition: opacity .6s ease, transform .6s cubic-bezier(.34,1.56,.64,1); }
+.anim-in { opacity: 1 !important; transform: none !important; }
+
+/* Bus box pulse glow */
+.bus-box { transition: box-shadow .3s; }
+.bus-box:hover { box-shadow: 0 6px 28px rgba(201,168,76,0.35), 0 2px 8px rgba(22,61,38,0.3); }
+
+/* Session icon spin on hover */
+.session-icon { transition: transform .4s cubic-bezier(.34,1.56,.64,1); }
+.session-icon:hover { transform: rotate(15deg) scale(1.15); }
+
+/* Time badge shimmer */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.time-badge {
+  background-size: 200% auto;
+  transition: background .4s;
+}
+.time-badge:hover {
+  background: linear-gradient(90deg, var(--green-pale), #c8f0d8, var(--green-pale));
+  background-size: 200% auto;
+  animation: shimmer 1.2s linear infinite;
+  color: var(--green-deep);
+}
+
+/* Gold divider grow */
+.gold-divider { transform: scaleX(0); transition: transform .8s .3s ease; }
+.gold-divider.anim-in { transform: scaleX(1) !important; opacity: 1; }
+
+/* Floating crescent particles */
+.particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  font-size: 18px;
+  opacity: 0;
+  animation: floatUp linear infinite;
+}
+@keyframes floatUp {
+  0%   { opacity: 0;   transform: translateY(0) rotate(0deg); }
+  10%  { opacity: 0.18; }
+  90%  { opacity: 0.08; }
+  100% { opacity: 0;   transform: translateY(-100vh) rotate(360deg); }
+}
+
+/* Section divider line draw */
+.session-divider { transform: scaleX(0); transform-origin: left; transition: transform .8s ease; }
+.session-divider.anim-in { transform: scaleX(1) !important; opacity: 0.4; }
+
+/* Footer slide up */
+.footer { transform: translateY(30px); opacity: 0; transition: transform .7s ease, opacity .7s ease; }
+.footer.anim-in { transform: translateY(0) !important; opacity: 1 !important; }
+
+/* Ripple on bus box click */
+.bus-box { overflow: hidden; cursor: default; }
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(201,168,76,0.25);
+  transform: scale(0);
+  animation: rippleOut .6s linear;
+  pointer-events: none;
+}
+@keyframes rippleOut {
+  to { transform: scale(4); opacity: 0; }
+}
+</style>
+
+<script>
+// ── 1. HEADER ENTRANCE (staggered) ──
+const headerChildren = document.querySelectorAll('.header-inner > *');
+headerChildren.forEach((el, i) => {
+  el.style.transition = `opacity .6s ${i * 0.12}s ease, transform .6s ${i * 0.12}s ease`;
+  el.style.transform  = 'translateY(-18px)';
+  setTimeout(() => {
+    el.style.opacity   = '1';
+    el.style.transform = 'translateY(0)';
+  }, 80 + i * 120);
+});
+
+// ── 2. SCROLL-TRIGGERED REVEAL ──
+const revealMap = [
+  ['.bus-box',          'anim-fade-up'],
+  ['.session',          'anim-fade-up'],
+  ['.session-divider',  'anim-in'],
+  ['.gold-divider',     'anim-in'],
+  ['.footer',           'anim-in'],
+  ['.note-box',         'anim-fade-left'],
+  ['.info-note',        'anim-fade-left'],
+  ['.time-row',         'anim-fade-right'],
+  ['.bullet-row',       'anim-fade-left'],
+];
+
+const allAnimEls = [];
+revealMap.forEach(([sel, cls]) => {
+  document.querySelectorAll(sel).forEach((el, i) => {
+    // stagger siblings
+    el.dataset.animDelay = i * 60;
+    el.dataset.animClass = cls;
+    if (cls !== 'anim-in') el.classList.add(cls.replace('anim-in','anim-fade-up') || cls);
+    allAnimEls.push(el);
+  });
+});
+
+// Add base classes
+document.querySelectorAll('.bus-box').forEach(el => el.classList.add('anim-fade-up'));
+document.querySelectorAll('.session').forEach((el,i) => { el.classList.add('anim-fade-up'); el.dataset.animDelay = i*80; });
+document.querySelectorAll('.note-box, .info-note').forEach(el => el.classList.add('anim-fade-left'));
+document.querySelectorAll('.time-row').forEach((el,i) => { el.classList.add('anim-fade-right'); el.dataset.animDelay = i*50; });
+document.querySelectorAll('.bullet-row').forEach((el,i) => { el.classList.add('anim-fade-left'); el.dataset.animDelay = i*60; });
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el    = entry.target;
+      const delay = parseInt(el.dataset.animDelay || 0);
+      setTimeout(() => el.classList.add('anim-in'), delay);
+      observer.unobserve(el);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(
+  '.bus-box, .session, .session-divider, .gold-divider, .footer, .note-box, .info-note, .time-row, .bullet-row'
+).forEach(el => observer.observe(el));
+
+// ── 3. FLOATING PARTICLES ──
+const symbols = ['🌙','✨','⭐','🌿','☽'];
+function spawnParticle() {
+  const p = document.createElement('div');
+  p.className = 'particle';
+  p.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+  p.style.left     = Math.random() * 100 + 'vw';
+  p.style.top      = '100vh';
+  p.style.fontSize = (12 + Math.random() * 14) + 'px';
+  const dur = 8 + Math.random() * 10;
+  p.style.animationDuration = dur + 's';
+  p.style.animationDelay    = Math.random() * 4 + 's';
+  document.body.appendChild(p);
+  setTimeout(() => p.remove(), (dur + 4) * 1000);
+}
+setInterval(spawnParticle, 2200);
+spawnParticle(); spawnParticle();
+
+// ── 4. BUS BOX RIPPLE ──
+document.querySelector('.bus-box').addEventListener('click', function(e) {
+  const rect = this.getBoundingClientRect();
+  const r = document.createElement('span');
+  r.className = 'ripple';
+  const size = Math.max(rect.width, rect.height) * 2;
+  r.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX-rect.left-size/2}px;top:${e.clientY-rect.top-size/2}px`;
+  this.appendChild(r);
+  setTimeout(() => r.remove(), 700);
+});
+
+// ── 5. MOON EMOJI PULSE on header ──
+const moon = document.querySelector('.moon-emoji');
+if (moon) {
+  let scale = 1, dir = 1;
+  setInterval(() => {
+    scale += dir * 0.008;
+    if (scale > 1.06 || scale < 0.96) dir *= -1;
+    moon.style.transform = `scale(${scale.toFixed(3)})`;
+  }, 40);
+}
+
+// ── 6. TIME BADGE COUNT-UP EFFECT ──
+document.querySelectorAll('.time-badge').forEach(el => {
+  el.addEventListener('mouseenter', function() {
+    this.style.transform = 'scale(1.08)';
+  });
+  el.addEventListener('mouseleave', function() {
+    this.style.transform = 'scale(1)';
+  });
+  el.style.transition = (el.style.transition || '') + ', transform .25s cubic-bezier(.34,1.56,.64,1)';
+});
+</script>
+</body>
+</html>
